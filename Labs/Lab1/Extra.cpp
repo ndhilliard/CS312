@@ -65,8 +65,6 @@ int main() {
 
 	WordDeque word;
 
-	cout << boolalpha;
-
 	word.first('a'); word.print(); // [a]
 	word.last('B'); word.print(); // [aB]
 	word.first('1'); word.print(); // this is ignored b/c non letter
@@ -83,4 +81,5 @@ int main() {
 	cout << "last() on empty: " << (word.last() == '\0') << "\n";
 
 	return 0;
+
 }
