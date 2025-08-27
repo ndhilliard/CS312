@@ -17,3 +17,25 @@ bool ppe(const string& s) {
 
 	return depth == 0; // if depth is 0 at the end of the string then all opens ('s are closed off with )'s
 }
+
+
+int main() {
+
+	string s;
+
+	s = "i(re)(w)";
+
+	cout << "ppe(\"" << s << "\") -> " << ppe(s) << '\n';
+
+	s = ") ( ()";
+
+	cout << "ppe(\"" << s << "\") -> " << ppe(s) << '\n';
+
+	s = "( ()";
+
+	cout << "ppe(\"" << s << "\") -> " << ppe(s) << '\n';
+
+	s = "(() (()))";
+
+	cout << "ppe(\"" << s << "\") -> " << ppe(s) << '\n';
+}
