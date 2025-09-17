@@ -1,0 +1,22 @@
+Step	statement				times executed
+1	if A[] or B[] = null			1 time
+
+2	return 0				1 time
+
+3	if n<=0 or t <=o or t > n		1 time
+
+4	return 0				1 time
+
+5	for i = 1; i <= 1 - t + 1		n - t + 1 times
+
+6	sum = 0					n - t + 1 times
+
+7	for j = 0; j <= t - 1			t(n - t + 1) times
+
+8	sum = sum + A[i + j]			t(n - t + 1) times 
+
+9	B[i] = sum / t				n - t + 1 times
+
+10	return M				1 time
+
+       

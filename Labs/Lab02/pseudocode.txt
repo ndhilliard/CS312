@@ -1,0 +1,12 @@
+Arrays A[1...n], B[1...n - t + 1]
+
+if A[] is null or B[] is null then
+	return 0;
+if n <= 0 or t <= 0 or t > n then
+	return 0
+for i = 1; i <= n - t + 1; i ++
+	sum = 0
+	for j = 0; j <= t - 1; j ++
+		sum = sum + A[i + j]
+	B[i] = sum / t
+return B
