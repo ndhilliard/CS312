@@ -1,0 +1,18 @@
+//constructing moving average algorithm
+//that takes an array, A, and an 
+//integer, s as inputs and returns an
+//array as an output
+
+MovingAverage(A,s)
+1. if s > 0 and s <= A.length, then
+	1. i <- 0
+	2. while i < A.length - s + 1, do
+		1. sum <- 0
+		2. j <- i
+		3. while j < i + s, do
+			1. sum <- sum + A[j]
+			2. j <- j + 1
+		4. T[i] <- sum / s
+		5. i <- i + 1
+	3. return T
+2. return []
