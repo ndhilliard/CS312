@@ -1,0 +1,11 @@
+Na = |A|, Nb = |B|
+input size n = Na + Nb
+
+T(Na, Nb) = 1 + Na + (Na - 1) + Nb +Nb + 1 = 2Na + 2Nb + 1 with n = Na + Nb
+T(n) = 4n + 5
+
+upper bound O for n > 1, 4n + 5 
+
+I didn't finish (cry)
+
+
