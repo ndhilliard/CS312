@@ -1,0 +1,12 @@
+FindMax(A[],B[]) 
+	maxValue = A[0]
+	for i <- 0; to sizeOf(A) - 1  i++ do
+		if A[i] > maxValue then
+			maxValue = A[i]
+	for i <- 0; to < sizeOf(B) - 1; i++ do
+		if B[i] > maxValue then
+			maxValue = B[i]
+
+	return maxValue
+
+		
