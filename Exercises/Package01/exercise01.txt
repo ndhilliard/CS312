@@ -1,0 +1,68 @@
+// task 1
+bool IsRight(a,b,c) {
+1 if a > b, then
+	1.1 t = a
+	1.2 a = b 
+	1.3 b = t
+2 if b > c, then
+	2.1 t = b
+	2.2 b = c
+	2.3 c = t
+3 if a > b, then
+	3.1 t = a
+	3.2 a = b
+	3.3 b = t
+4 if a^2 + b^2 = c^2, then
+	1 return true
+5 else 
+	1 return false
+
+}
+
+// task 2
+
+void FindFactors(a) {
+1 if a < 0, then
+	1.1 return 0
+2 print "The factors of a are: "
+3 for int i <- 1 to a by 1, do
+	3.1 if a % i == 0, then
+		3.1.1 print "i, "
+}
+
+// task 3
+int FindMax(a) {
+1int max <- a[0]
+2.for i <- 1 to sizeof(a) - 1 by 1, do
+	2.1 if a[i] > max, then
+		2.1.1 max <- a[i]
+3 return max
+
+}
+
+// task 4
+SmallestPrime(a) {
+1 if a <= 1 or a > 1000, then
+	1.1 return 0
+2 for int factor <- 2 to a, do
+	2.1 if a % factor == 0, then
+		2.1.1 if IsPrime(factor), then
+			2.1.1.1 return factor
+}
+
+// task 5
+LCM(a,b) {
+1 if a <= 0 or b <= 0, then
+	1.1 return 0
+2 int x <- a
+3 int y <- b
+
+4 while y != 0, do
+	4.1 r <- x % y
+	4.2 x <- y
+	4.3 y <- r
+5 int gcd <- x
+
+6 int lcm <- (a / gcd) * b
+
+7 return lcm

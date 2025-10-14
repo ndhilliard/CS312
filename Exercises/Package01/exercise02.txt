@@ -1,0 +1,61 @@
+// task 1 table
+
+statements		cost		time
+1			1		1
+1.1			1		1
+1.2			1		1
+1.3			1		1
+2			1		1
+2.1			1		1
+2.2			1		1
+2.3			1		1
+3			1		1
+3.1			1		1
+3.2			1		1
+3.3			1		1
+4			1		1
+4.1			1		1
+5			1		1
+5.1			1		1
+
+total runtime = 14? because if 4 is true 5 and 5.1
+
+// task 2
+
+statements		cost		time
+1			1		1
+1.1			1		1
+2			1		1
+3			1		n+1
+3.1			1		n
+3.1.1			1		n
+
+big(O) =3n+3
+
+// task 3
+statements		cost		time
+1			1		1
+2			1		n+1
+2.1			1		n
+2.1.1			1		n
+3			1		1
+
+big(O) = 3n+3
+
+// task 4
+statements		cost		time
+1			1		1
+1.1			1		1
+2			1		n+1
+2.1			1		n
+2.1.1			1		n(n+1)?
+2.1.1.1			1		1
+		
+big(O) = 3n(n+1)+4???
+
+
+
+
+
+
+
