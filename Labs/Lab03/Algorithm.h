@@ -1,21 +1,22 @@
 #ifndef ALGORITHM_H
+#define ALGORITHM_H
 #include <iostream>
 #include <iomanip>
 #include <string>
 
 
-int BinarySearch(int A[], int hp, int lp, int x) {
+int BinarySearch(int A[], int lp, int hp, int x) {
 	if (lp > hp) {
 		return -1;
 	}
 
-	int midpoint = (hp + lp) / 2;
+	int midpoint = lp + (hp - lp) / 2;
 	if (A[midpoint] == x) {
 		return A[midpoint];
 	} else if (A[midpoint] < x) {
-		return BinarySearch(A, lp, midpoint, x);
-	} else if (A[midpoint] > x) {
-		return BinarySearch(A, midpoint, hp, x);
+		return BinarySearch(A, midpoint - 1, hp, x);
+	} else {
+		return BinarySearch(A, lp, midpoint + 1, x);
 	}
 }
 
