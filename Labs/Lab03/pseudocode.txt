@@ -1,0 +1,14 @@
+BinarySearch(A,lp,hp,x) {
+	1 midpoint = (hp-lp) /2
+	2 if A[midpoint] = x, then 
+		2.1 then return A[midpoint]
+	3 else if A[midpoint] < x, then 
+		3.1 hp <- hp/2
+		3.1 BinarySearch(A,lp,hp,x)
+	4 else if A[midpoint] > x, then 
+		4.1 lp <- hp/2
+		4.2 BinarySearch(A,lp,hp,x)
+	5 else if lp = hp, then
+		5.1 x does not belong in dataset
+	
+		
