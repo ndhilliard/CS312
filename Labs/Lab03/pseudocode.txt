@@ -1,12 +1,12 @@
 BinarySearch(A,lp,hp,x) {
-	1. if low > high, then
+	1. if lp> hp, then
 		1.1 return -1
-	2 mid <- low + floor((high - low)/2)
-	3 if A[midpoint] = x, then 
-		3.1 return midpoint
-	4 else if A[midpoint] < x, then 
-		4.1 return BinarySearch(A,midpoint+1, hp, x) 
-	5 else if A[midpoint] > x, then 
-		5.2 BinarySearch(A,lp,midpoint - 1,x)
+	2 mid <- lp + L(hp - lp)  /2
+	3 if A[mid] = x, then 
+		3.1 return mid
+	4 else if A[mid] < x, then 
+		4.1 return BinarySearch(A, mid +1, hp, x) 
+	5 else if A[mid] > x, then 
+		5.2 return BinarySearch(A, lp, mid - 1,x)
 	
 		

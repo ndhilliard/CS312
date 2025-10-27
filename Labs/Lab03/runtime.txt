@@ -6,6 +6,8 @@ f(n) = 1
 
 T(1/2)+1 = .5T+1
 
-log(2)^1 = 0
+log(2)^1 = 0 
 
-omeg(n^0log^0n) case 2 k = 0
+log n^(log_b a) * log^ k, k = 0 = case 2
+
+T(n) = 0(log n)

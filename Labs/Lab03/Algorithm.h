@@ -11,14 +11,14 @@ int BinarySearch(int A[], int lp, int hp, int x) {
 	}
 
 	int midpoint = lp + (hp - lp) / 2;
+
 	if (A[midpoint] == x) {
-		return A[midpoint];
+		return midpoint;
 	} else if (A[midpoint] < x) {
-		return BinarySearch(A, midpoint - 1, hp, x);
+		return BinarySearch(A, midpoint +  1, hp, x);
 	} else {
-		return BinarySearch(A, lp, midpoint + 1, x);
+		return BinarySearch(A, lp, midpoint - 1, x);
 	}
 }
 
 #endif // !ALGORITHM_H
-#pragma once
