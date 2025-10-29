@@ -6,7 +6,7 @@ namespace kadane
     double MaxSubArray(double A[],int& lo,int& hi)
     {
         double sum = 0, max = 0;
-        int mxlo = lo, mxhi = hi;      
+        int mxlo = lo, mxhi = hi, s = lo;      
 
         for(int i = lo;i <= hi;i += 1)
         {
@@ -16,12 +16,13 @@ namespace kadane
             {
                 max = sum;
                 mxhi = i;
+		mxlo = s;
             }
 
             if(sum < 0)
             {
                 sum = 0;
-                mxlo = i + 1;
+                s = i + 1;
             }
         }
         lo = mxlo;
