@@ -7,6 +7,10 @@
 #include <initializer_list>
 #include <stdexcept>
 
+#define Parent(X) (((X) - 1) / 2)
+#define Left(X) (2*(X) + 1)
+#define Right(X) (2*(X) + 2)
+
 namespace aa
 {
 	class Object 
