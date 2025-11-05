@@ -1,0 +1,14 @@
+Enqueue(A,x) 
+
+1 if sz == length
+ 1.1 return
+2 i <- sizeof(A)
+3 sizeof(A) < sizeof(A) + 1
+4 a[i] <- x
+5 while i > 0 and key(A[Parent(i)]) > Key(A[i]), do
+ 5.1 temp <- A[i]
+ 5.2 a[i] <- A[Parent(i)]
+ 5.3 A[Parent(i) <- temp
+ 5.4 i <- Parent(i)
+
+6 return
