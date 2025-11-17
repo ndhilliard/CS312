@@ -67,10 +67,35 @@ namespace aa
         }
     }
 
-    void LetterCountSort(std::string A,std::string& B)
-    {
-        
+        int index(char ch) {
+        return tolower(ch - 'a');
     }
+    void LetterCountSort(std::string A, std::string& B)
+    {
+        int C[26];
+		int n = A.length();
+
+        for (int i = 0; i < 26; i++) {
+
+            C[i] = 0;
+        }
+
+        for (int i = 0; i < n; i++) {
+            C[index(A[i])] += 1;
+        }
+
+        for (int i = 1; i < 26; i++) {
+            C[i] = C[i] + C[i - 1];
+		}
+
+        for (int i = n - 1; i >= 0; i--) {
+            B[C[index(A[i])] - 1] = A[i];
+            C[index(A[i])] -= 1;
+        }
+
+    }
+
+}
 }
 
 #endif
