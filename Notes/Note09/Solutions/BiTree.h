@@ -29,6 +29,16 @@ namespace aap
 			obj = nullptr;
 		}
 	}
+
+	template <typename T>
+	BiTree<T>* CopyTree(BiTree<T>* rt)
+	{
+		if(rt == nullptr) {return nullptr;}
+		BiTree<T>* cp = new BiTree<T>(rt->data);
+		cp->left = CopyTree(rt->left);
+		cp->right = CopyTree(rt->right);
+		return cp;
+	}
 }
 
 #endif 
