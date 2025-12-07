@@ -1,0 +1,26 @@
+CountSort(A)
+
+1. B[0..n-1]
+2. C[0..9]
+
+3. for i <- 0 to 9, do
+   3.1 C[i] <-0
+
+4. for i <- 0 to n-1, do
+   4.1 digit <- A[i]
+   4.2 C[digit] <- C[digit] + 1
+
+
+5. for i <- 1 to 9, do 
+   5.1 C[i] <- C[i] + C[i-1]
+
+6. for i <- n-1 down to 0, do
+   6.1 digit <- A[i]
+   6.2 position <- C[digit] - 1
+   6.3 B[position] <- digit
+   6.4 C[digit] <- C[digit] - 1
+
+7. for i <- 0 to n-1, do
+   7.1 A[i] <- B[i]
+
+8. return A
