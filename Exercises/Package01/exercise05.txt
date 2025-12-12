@@ -1,0 +1,34 @@
+1) if k >= d, then p(n) = O(n^k)
+
+for large n ad*n^d is the biggest term in p(n)
+if k>=d then n^d <= n^k
+
+so p(n) is always less n or equal to constant times n^k
+so for Big O, p(n) = O(n^k)
+
+2) if k <= d then p(n) = omega(n^k)
+
+because ad*n^d is positive and the largest term should be p(n) should at least be ad*n^d
+if k <= d then n^k <=n^d
+so p(n) is always greater than or equal to a constant times n^k
+so big O p(n) = omega(n^k)
+
+3) if k = d then p(n) = Theta(n^k)
+from statement one when k = d then p(n) = O(n^k)
+and from question 2 when k =d p(n) = omega (n^k)
+since both are O(n^k) and omega(n^k) that means p(n) = Theta(n^k)
+
+4 if k > d then p(n) o(n^k)
+p(n)/n^k
+since k > d exponent is negative
+as n grows the terms go to 0
+so ratio goes to 0
+so then little o p(n) = o(n^k)
+
+5 k < d then p(n)=omega(n^k)
+one term becomes ad*n^(d-k)
+since k < d the exponent is positive
+so ad*n^(d-k) grows infinitely large
+so omega p(n)=omega(n^k)
+
+
